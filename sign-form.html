@@ -77,16 +77,42 @@ background-image:image(hr-img)
 legend{font-family: 'Oswald', sans-serif;
 font-size: 33px;
 font-weight: bold;
+} </style>
+<script>
+    var score=0.0
+var confirmessage =confirm("Do you want to take a short cute quiz *-*");
+if(confirmessage==false){
+    var confirmessage=confirm("ok -_-")
 }
+else if(confirmessage==true){
+    var quiz=parseInt(prompt("enter a number between 1 and 5 that is divisible by 3 ."));
+    
 
-    </style>
+ if(quiz ===3){
+score++; 
+}
+var quiz2 =parseInt(prompt("How many Continents are there"));
+if (quiz2 ===7){
+    
+    score++;
+}
+var quiz1=prompt( " Now tell me what is the largest animal in the world")  ;
+ if  (quiz1==whale){
+    score++;
+ }
+ var quiz3 =parseInt(prompt("How many Continents are there"));
+if (quiz3 ===7){
+    
+    score++;
+ }
+
+document.write("your score is" + score);}
+</script>
+
     <script src="https://kit.fontawesome.com/ff869fd2b8.js" crossorigin="anonymous"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>

@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     
     <title>Document</title>
-    <script>
-        var x ;
-        var y;
-         y= window.prompt("Enter the value of y");
-         x= window.prompt("Enter the value of x"); 
-         x = parseInt(x)
-          y = parseInt(y)
-         var res = y + x;
-         var  sub= y - x;
-         var  mul = y * x;
-         var  div= y / x;
-          document.writeln("<h1>"+res+"<h1>")
-    
-    
-    
-    </script>
+<script>
+var namn ;
+var now = new Date();
+var hour = now.getHours(); 
+var res= "";
+var color="" ;
+name= prompt ("Enter you'r name");
+color= prompt("Enter you'r fav color");
+if( hour>=12&& hour18){
+res= "good afternoon";
+} else if (hour<12){
+    res= "good moorning";
+} else if(hour>18) {
+    res= " good evening";
+}
+res= res+", <span style= 'color: "+color+"'>"+name+"</span>, welcome to java programing";
+
+
+
+
+
+
+</script>
+
 </head>
 <body>
     

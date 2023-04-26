@@ -46,7 +46,7 @@ text-decoration: none;
 font-size: 18px;
 color: white;}
 .footer{
-    position: fixed;
+    
     width: 99%;
     height: 82px;
     line-height: 60pv;
@@ -77,10 +77,9 @@ h1{
 .menu > ul > li >a:hover {
     background-color: #1f3251;
     font-weight: bold;
-    text-decoration-line: underline;
-}
+    text-decoration-line: underline;   
+}</style>
 
-    </style>
     <script src="https://kit.fontawesome.com/ff869fd2b8.js" crossorigin="anonymous"></script>
 
 </head>
@@ -136,9 +135,14 @@ h1{
    <i class="fa-brands fa-github"style="color:black;"></i>
    <i class="fa-brands fa-linkedin" style="color:black;"></i>
    <i class="fa-brands fa-twitter" style="color: black;"></i>
-   </p>
-   
-   </div>
+   </p></div>
      
+   <script>
+    let rate = prompt("Rate the website from 1 to 5") 
+    rate = parseInt(rate);
+    for( let i=1;i<=rate;i++){
+        document.write("<img src='redstar.png' height='50' width='50'>")
+    }
+    </script>
 </body>
 </html>

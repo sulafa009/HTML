@@ -35,6 +35,38 @@ font: 1em "open sans", sans-serif;
 
 } 
 
+
+
+//////////////////////
+if(quiz ===3 ){
+    alert("correct answer +_+")
+score++;
+
+}else {
+
+ let quiz1=prompt( "+","+" Now tell me what is the largest animal in the world")  
+ if  (quiz1==whale){
+    alert("correct answer +_+")
+    score++;
+ } else{
+     
+
+let quiz2 =prompt("How many Continents are there")
+if (quiz2 =="7"){
+    alert("correct answer +_+")
+    score++;
+ } else{
+    alert(" sorry its wrong answer :( ") 
+}
+
+ else {
+    let confirmessage=confirm("ok -_-")
+} }
+}
+document.write("your score is "+score)
+
+}
+
 body,html{
     margin:0
 padding:0
