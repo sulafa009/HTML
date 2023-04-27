@@ -79,34 +79,44 @@ font-size: 33px;
 font-weight: bold;
 } </style>
 <script>
-    var score=0.0
+   var score=0.0 ;
 var confirmessage =confirm("Do you want to take a short cute quiz *-*");
 if(confirmessage==false){
     var confirmessage=confirm("ok -_-")
 }
 else if(confirmessage==true){
-    var quiz=parseInt(prompt("enter a number between 1 and 5 that is divisible by 3 ."));
-    
-
- if(quiz ===3){
+    var quiz=parseInt(prompt("enter a number between 1 and 8 that is divisible by 3 ."));
+ 
+ if(quiz===3 || quiz===6){
 score++; 
 }
-var quiz2 =parseInt(prompt("How many Continents are there"));
-if (quiz2 ===7){
-    
-    score++;
-}
+
 var quiz1=prompt( " Now tell me what is the largest animal in the world")  ;
- if  (quiz1==whale){
+ if  (quiz1=="whale"){
     score++;
  }
+ var quiz2 =parseInt(prompt("its simple quistion for you'r score , how much 99+(102-52) ? +_+ "));
+ if  (quiz2===149){
+    score++;
+ }
+
+
  var quiz3 =parseInt(prompt("How many Continents are there"));
 if (quiz3 ===7){
     
     score++;
- }
 
-document.write("your score is" + score);}
+ } else if (quiz3===6 || quiz3===8){
+    
+    score += 0.5;
+
+ } if(score >=2){
+
+alert(" Greate your score is" + score+"*-*")
+ } else if(score <2){
+    alert(" Sorry your score is" + score+"-_-")
+ }
+}
 </script>
 
     <script src="https://kit.fontawesome.com/ff869fd2b8.js" crossorigin="anonymous"></script>
