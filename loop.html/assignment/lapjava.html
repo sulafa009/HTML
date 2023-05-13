@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>java script </title>
+<script>
+
+let email = prompt("Please enter your email address:");
+let password = prompt("Please enter your password:");
+
+let isValidPassword = false;
+
+while (!isValidPassword) {
+  if (password.length < 6 || password.length > 12 || !/\d/.test(password) || !/[A-Z]/.test(password)) {
+    alert("Your password is invalid. Please try again.");
+    password = prompt("Please enter your password:");
+  } else {
+    isValidPassword = true;
+  }
+}
+
+
+document.getElementById("email-input").Value = email;
+document.getElementById("password-input").Value = password;
+
+</script>
+
+<style type="text/css">
+  body{
+   height: 1000px;
+ }
+
+ h1{
+  color: white;
+  background-color: black;
+     padding-top: 20pt;
+     padding-bottom: 20pt;
+     text-align: center;
+
+
+}
+
+
+.auther{
+    position: fixed;
+    width: 99%;
+    height: 82px;
+    line-height: 60pv;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    left: 0;
+
+}
+.auther p{
+    justify-content: center;
+     align-items: center;
+     text-align: center;
+
+}
+</style>
+</head>
+
+<body>
+  
+    <h1> Email and password </h1>
+  
+  <br>
+  <form action="">
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email-input" name="email" ></p>
+      <p>
+      <label for="password">Password:</label>
+      <input type="password" id="password-input" name="password" >
+      </p>
+  </form>
+
+  <h1> Gallery </h1>
+ <script>
+  let numOfImages = parseInt (prompt ("What is the number of images you would like to add?"));
+for (let i=1 ; i<=numofImages ;i++) {
+let gallery =prompt("Enter the source of the "+i+" image you want to add:");
+document.write(`<img src='${gallery}'></img>`);
+
+}
+ </script>
+  
+     <br>
+     
+
+    <div class="auther">
+      <p style="font-size: 20px;">
+     &copy; to auther 
+      </p></div>
+</body>
+</html>

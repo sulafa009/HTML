@@ -10,8 +10,10 @@ var now = new Date();
 var hour = now.getHours(); 
 var res= "";
 var color="" ;
+var bgcolor="";
 name= prompt ("Enter you'r name");
 color= prompt("Enter you'r fav color");
+bgcolor= prompt("Enter you'r fav bgcolor");
 if( hour>=12&& hour18){
 res= "good afternoon";
 } else if (hour<12){
@@ -20,7 +22,7 @@ res= "good afternoon";
     res= " good evening";
 }
 res= res+", <span style= 'color: "+color+"'>"+name+"</span>, welcome to java programing";
-
+document.write("<h2 style = 'background-color:"+bgcolor+"'>"+ res+"</h2>");
 
 
 

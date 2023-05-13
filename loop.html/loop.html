@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+          background-color: #FFFFFF;
+        }
+        </style>
+        
+        <script>
+        var date = new Date();
+        var hours = date.getHours();
+        if (hours >= 6 && hours < 18) {
+          document.body.style.backgroundColor=oran; // Set background color to orange during the day
+        } else {
+          document.body.style.backgroundColor = '#000000'; // Set background color to black at night
+        }
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
