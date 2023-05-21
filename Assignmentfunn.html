@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<h1>Tell Us Who You Are In Order To Play</h1>
+
+<form action="" id="myform">
+<fieldset>
+<legend>
+User Info
+</legend>
+<p> <label for="name"> Name : </label>
+<input type="text" id="name" size="15" maxlength="15" placeholder="Name" required > </p>
+<p> <label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="Email" required></p>
+<p><button type="submit">Submit</button><br></p>
+</legend>
+</fieldset>
+</form>
+<br>
+<br>
+<br>
+<p>
+<h2>Dice Roll (Guess the sum of the two dices with<span id="attemptsnumber"></span> Attempts) </h2>
+<input type="number" id="guessin" min="1" max="9" size="50" required> </p>
+<p><button type="submit" id="guessbtn"disabled>Go!</button><br></p>
+<ol>
+    <li><img id="die1" ></li>
+    <li><img id="die2" ></li>
+</ol>
+<h3 id="disresult"></h3>
+<script>
+
+let attemptsNumber = document.getElementById("attemptsnumber");
+let guessIn = document.getElementById("guessin");
+let guessBtn = document.getElementById("guessbtn");
+let disResult = document.getElementById("disresult");
+let myForm = document.getElementById("myform");
+let dice1;
+let dice2;
+let targetNumber;
+let attempts = 5;
+
+myForm.addEventListener('submit',handleSubmit);
+function began() {
+ guessBtn.addEventListener("click",handleClick)
+dice1 = document.getElementById("die1");
+dice2 = document.getElementById("die2");
+
+}
+function rollDice() {
+            var dice1Value = Math.floor(Math.random() * 6) + 1;
+            var dice2Value = Math.floor(Math.random() * 6) + 1;
+            dice1.setAttribute("src", "img/die" + dice1Value + ".png");
+            dice2.setAttribute("src", "img/die" + dice2Value + ".png");
+            targetNumber = dice1Value + dice2Value;
+        }
+function handleSubmit(e){
+attemptsNumber.innerText = attempts;
+e.preventDefault();
+guessBtn.disabled=false;
+}
+function handleClick(){
+let userGuess=parseInt(guessIn.value);
+rollDice(); 
+Result(userGuess)
+attempts --;
+attemptsNumber.innerText = attempts;
+if(attempts===0){
+guessBtn.disabled = true;
+disResult.innerText="Game overr!!."
+}
+} 
+
+
+function Result(userGuess){
+if(userGuess<1 || userGuess>9 || isNaN(userGuess)){
+disResult.innerText=" Invalid value, please enter a number between 1 & 9"
+}else if (userGuess===targetNumber){
+disResult.innerText="Congratulations , your guess is coorrect !! +_+ waw!"
+guessBtn.disabled = true;
+}else{
+disResult.innerText=`Wrong answer ,try again -_- the correct value is ${targetNumber}`
+}
+}
+began();
+</script>
+</body>
+</html>
+
+
