@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //pre بتنسخ الكود متل ماهو 
+
+        var month = new Date().getMonth();
+        var year = new Date().getFullYear();
+        var dayofthemonth = parseInt(prompt("Enter the day off"));
+        var limit=1;
+        switch(month){
+            case 4: case 6: case 9: case 11:
+                limit=30;
+                break;
+                case 1: case 3: case 5: case 7: case 8: case 10:case 12:
+                limit=31;
+                break;
+                case 2: 
+                if(year%4==0 && year%100!==0 || year%400==0)
+                limit=29 ;
+                else
+                limite=28;
+                //مافي داعي اعمل ديفولت هون لان اخدت من السيستم التاريخ 
+        }
+        if(dayofthemonth>=1 && dayofthemonth<=limit)
+        alert("have a nice vication");
+        else
+        alert("choice another day");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

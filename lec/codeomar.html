@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function displayFullName() {
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("familyName").value;
+        let fullName = firstName + " " + lastName;
+        document.getElementById("FullNameResult").innerText = fullName;
+      }
+
+      function checkName() {
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("familyName").value;
+
+        if (firstName === lastName) {
+          document.getElementById("NameCheckResult").innerText =
+            "The first name and family name are the same.";
+        } else {
+          document.getElementById("NameCheckResult").innerText =
+            "The first name and family name are different.";
+        }
+      }
+    </script>
+  </head>
+  
+  <body>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" />
+    <br />
+    <br />
+
+    <label for="familyName">Family Name:</label>
+    <input type="text" id="familyName" />
+    <br />
+    <br />
+
+    <button onclick="displayFullName()">Display</button>
+    <button onclick="checkName()">Check</button>
+    <p id="FullNameResult"></p>
+    <p id="NameCheckResult"></p>
+  </body>
+</html>

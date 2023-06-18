@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name ;
+        let  res= "";
+        let  hour= now.getHours() ;
+        let  now= new Date() ;
+
+    name =prompt("Please enter your name :) ");
+    if (hour>18)
+    res="Good evening --"
+    if (hour>=12&& hour<18)
+    res="Good afternoon "
+    if(hour<12)
+    res="good Morning"
+    
+    res= res+","+name+ ", welcome to javascript *-*" ;
+    document.write("<h2>"+ res+"</h2>")
+    </script>
+
+</head>
+
+<body>
+
+<h2>hi</h2>
+</body>
+</html>
